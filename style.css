@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+/* heder section */
+
+nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 9;
+    width: 99%;
+}
+
+header ul {
+    display: flex;
+    justify-content: end;
+    padding: 20px 30px;
+    gap: 50px;
+    font-size: 20px;
+    background-color: #969BDB;
+    width: 85%;
+    border-radius: 0 0 32px 32px;
+}
+
+header ul a {
+    color: black;
+    text-decoration: none;
+}
+
+.logo img {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    width: 5%;
+}
+
+/* header slider */
+.slider {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.slider .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .list .item .content {
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.slider .list .item .content .title,
+.slider .list .item .content .type {
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.slider .list .item .type {
+    color: #14ff72cb;
+}
+
+.description {
+    font-size: 14px;
+}
+
+.slider .list .item .button .button {
+    margin-top: 20px;
+}
+
+.slider .list .item .button button {
+    border: none;
+    background-color: #eee;
+    padding: 7px 15px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+
+.slider .list .item .button button:hover {
+    background-color: #7379d5;
+    color: white;
+}
+
+.slider .list .item .button button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+.thumbnail {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.nextPrevArrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 9;
+}
+
+.nextPrevArrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #969BDB;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nextPrevArrows button:hover {
+    background-color: #7075B7;
+    color: black;
+}
+
+.item:nth-child(1) {
+    z-index: 1;
+}
+
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .type,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .button {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .list .item:nth-child(1) .content .title {
+    animation-delay: 0.4s !important;
+}
+
+.slider .list .item:nth-child(1) .content .type {
+    animation-delay: 0.6s !important;
+}
+
+.slider .list .item:nth-child(1) .content .description {
+    animation-delay: 0.8s !important;
+}
+
+.slider .list .item:nth-child(1) .content .buttons {
+    animation-delay: 1s !important;
+}
+
+
+/* Animation for next button click */
+.slider.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.slider.next .thumbnail .item:nth-last-child(1) {
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.slider.prev .list .item img {
+    z-index: 100;
+}
+
+
+@keyframes showThumbnail {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+.slider.next .thumbnail {
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext {
+    from {
+        transform: translateX(150px);
+    }
+}
+
+
+
+/* Animation for prev button click */
+.slider.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img {
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.slider.prev .thumbnail .item:nth-child(1) {
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.slider.next .nextPrevArrows button,
+.slider.prev .nextPrevArrows button {
+    pointer-events: none;
+}
+
+
+.slider.prev .list .item:nth-child(2) .content .title,
+.slider.prev .list .item:nth-child(2) .content .type,
+.slider.prev .list .item:nth-child(2) .content .description,
+.slider.prev .list .item:nth-child(2) .content .buttons {
+    animation: contentOut 1.5s linear 1 forwards !important;
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .slider .list .item .content {
+        padding-right: 0;
+    }
+
+    .slider .list .item .content .title {
+        font-size: 50px;
+    }
+}
+
+/* making about section */
+.gif img {
+    position: absolute;
+    z-index: -1;
+    width: 17%;
+    left: 50%;
+}
+
+.about-container {
+    width: 95%;
+    padding: 75px 50px 170px;
+    background: linear-gradient(#bfc3f4, #767895);
+    clip-path: polygon(168.72% -0.12%, 0% 0%, -0.78% 99%);
+}
+
+.about-content span:nth-child(1) {
+    display: block;
+    padding: 30px 0;
+    width: 50%;
+}
+
+.about-content span:nth-child(2) {
+    display: block;
+    width: 50%;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 70px;
+}
+
+.vision-content {
+    padding: 20px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.objective-content {
+    padding: 5px 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.objective h1 {
+    padding: 0 0 15px;
+}
+
+/* making 3d image rotate academic section */
+.d3-head {
+    padding: 60px 70px;
+}
+
+.d3-banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.d3-banner .d3-slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateX(-16deg) rotateY(var(--rotation));
+    transition: transform 0.5s ease;
+    overflow: visible;
+}
+
+.d3-banner .d3-slider .d3-item {
+    position: absolute;
+    inset: 0;
+    width: 200px;
+    height: 200px;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+    overflow: hidden;
+}
+
+.d3-banner .d3-slider .d3-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.d3-button-wrapper {
+    position: relative;
+    bottom: 460px;
+}
+
+.d3-button-wrapper button {
+    position: relative;
+    left: 15%;
+    background-color: #969bdb;
+    border: none;
+    border-radius: 50%;
+    padding: 20px 25px;
+    transition: .5s;
+}
+
+.d3-button-wrapper button:hover {
+    background-color: #7075B7;
+    color: black;
+}
+
+#d3-prev {
+    position: relative;
+    left: 12%;
+}
+
+#d3-next {
+    position: relative;
+    left: 75%;
+}
+
+/* making event section */
+.event-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.event-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * 6 / 3);
+}
+
+/* .event-slide {
+width: 100%;
+flex: 1 0 auto;
+} */
+
+.event-slide img {
+    width: 100%;
+}
+
+.event-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.event-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.event-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
