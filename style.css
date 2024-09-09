@@ -324,8 +324,8 @@ header ul a {
 .gif img {
     position: absolute;
     z-index: -1;
-    width: 17%;
-    left: 50%;
+    width: 32%;
+    left: 65%;
 }
 
 .about-container {
@@ -486,4 +486,131 @@ flex: 1 0 auto;
 
 .event-controls button:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* making footer of website */
+.footer {
+    background-color: #a2a5ce;
+    border-top-left-radius: 188px;
+    margin: 80px 0 0;
+    padding: 45px 0 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 20%;
+    padding: 55px 25px;
+}
+
+.footer-col h4 {
+    position: relative;
+    left: 0;
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 700;
+    position: relative;
+    overflow: visible;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: white;
+    padding-left: 8px;
+}
+
+.footer-col .social-link a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000;
+    transition: all 0.5s ease;
+    position: relative;
+    left: 3px;
+}
+
+.footer-col .social-link a:hover {
+    color: #24262b;
+    background-color: #fff;
+}
+
+/* responsive */
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+.copy-right{
+    display: flex;
+  justify-content: end;
+  padding: 0 60px;
+  position: relative;
+  bottom: 85px;
+}
+
+.go-up{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.go-up span{
+    height: 200px;
+    width: 93%;
+    display: block;
+    background-color: black;
+    border-radius: 200% 200% 0 0;
+    position: relative;
+    top: 110px;  
 }
