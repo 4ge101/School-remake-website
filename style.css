@@ -45,10 +45,37 @@ header ul a {
     width: 5%;
 }
 
+nav ul li.active {
+    transform: translateY(-10px);
+    transition: .5s;
+}
+
+nav .nav-effect {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+nav .nav-effect::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 170px;
+    height: 50px;
+    background-color: white;
+    content: '';
+    border-radius: 0 40px 0 0;
+    transition: .5s;
+}
+
 @media (max-width: 800px) {
     nav {
         position: fixed;
-        z-index: 999;
+        /* z-index: 999; */
         bottom: 0;
         left: 0;
         right: 0;
@@ -103,7 +130,7 @@ header ul a {
     transform: translateX(-50%);
     padding-right: 30%;
     box-sizing: border-box;
-    color: #fff;
+    color: #000000;
     text-shadow: 0 5px 10px #0004;
 }
 
@@ -114,11 +141,13 @@ header ul a {
 }
 
 .slider .list .item .type {
-    color: #14ff72cb;
+    color: #000;
 }
 
 .description {
     font-size: 14px;
+    color: white;
+    z-index: 9;
 }
 
 .slider .list .item .button .button {
@@ -127,9 +156,9 @@ header ul a {
 
 .slider .list .item .button button {
     border: none;
-    background-color: #eee;
+    background-color: #969bdb;
     padding: 7px 15px;
-    font-weight: 500;
+    font-weight: 800;
     cursor: pointer;
     letter-spacing: 2px;
     border-radius: 4px;
@@ -225,19 +254,20 @@ header ul a {
 }
 
 .slider .list .item:nth-child(1) .content .title {
-    animation-delay: 0.4s !important;
+    animation-delay: 0.4s;
 }
 
 .slider .list .item:nth-child(1) .content .type {
-    animation-delay: 0.6s !important;
+    animation-delay: 0.6s;
 }
 
 .slider .list .item:nth-child(1) .content .description {
-    animation-delay: 0.8s !important;
+    animation-delay: 0.8s;
+    padding: 10px 0 25px;
 }
 
 .slider .list .item:nth-child(1) .content .buttons {
-    animation-delay: 1s !important;
+    animation-delay: 1s;
 }
 
 
@@ -330,7 +360,7 @@ header ul a {
 .slider.prev .list .item:nth-child(2) .content .type,
 .slider.prev .list .item:nth-child(2) .content .description,
 .slider.prev .list .item:nth-child(2) .content .buttons {
-    animation: contentOut 1.5s linear 1 forwards !important;
+    animation: contentOut 1.5s linear 1 forwards;
 }
 
 @keyframes contentOut {

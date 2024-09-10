@@ -1,3 +1,15 @@
+// making nav active class
+let nav = document.querySelector('nav');
+let li_items = document.querySelectorAll('li')
+li_items.forEach(item => {
+    item.onclick = () => {
+        let oldActive = nav.querySelector('li.active');
+        if (oldActive) oldActive.classList.remove('active');
+        item.classList.add('active');
+    }
+})
+
+
 // making slider which change background 
 let nextBtn = document.querySelector('.next')
 let prevBtn = document.querySelector('.prev')
