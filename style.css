@@ -651,6 +651,29 @@ nav ul li a {
     .d3-head {
         padding: 45px 30px;
     }
+
+    .d3-banner .d3-slider {
+        width: 180px;
+        height: 180px;
+        left: calc(55% - 100px);
+    }
+
+    .d3-banner .d3-slider .d3-item {
+        inset: 15px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .d3-banner .d3-slider .d3-item img {
+        width: 70%;
+        height: 70%;
+    }
+
+    #d3-next {
+        left: 65%;
+    }.d3-button-wrapper {
+        bottom: 400px;
+      }
 }
 
 /* making event section */
