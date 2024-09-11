@@ -8,8 +8,61 @@
 }
 
 /* heder section */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    overflow: hidden;
+}
+
+nav {
+    width: 90%;
+    height: 55px;
+    background-color: #172d54;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 0 0 30px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    gap: 35px;
+    padding: 0 40px;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    width: 5%;
+    position: absolute;
+    left: 90px;
+    top: 2px;
+}
 
 @media (max-width: 800px) {
+    header {
+        z-index: 999;
+    }
+
     nav {
         position: fixed;
         inset: auto 0 0 0;
@@ -18,9 +71,21 @@
         --w-h-item: 60px;
         --position-x-active: 170px;
         z-index: 999;
-        overflow: visible;    
+        overflow: visible;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 0;
+        border-radius: 0;
     }
-    
+
+    .logo img {
+        display: none;
+    }
+
     nav ul {
         padding: 0;
         margin: 0;
@@ -29,7 +94,7 @@
         grid-template-rows: var(--w-h-item);
         justify-content: space-between;
     }
-    
+
     nav ul li {
         display: flex;
         align-items: center;
@@ -38,11 +103,22 @@
         transition: .5s;
         color: rgb(235, 42, 42);
     }
-    
+
+    nav ul li i {
+        overflow: hidden;
+    }
+
+    nav ul li a {
+        position: absolute;
+        bottom: 0;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
     nav ul li.active {
         transform: translateY(-10px);
     }
-    
+
     nav .effect {
         position: absolute;
         width: 100%;
@@ -52,8 +128,8 @@
         z-index: -1;
         overflow: hidden;
     }
-    
-    nav .effect::before{
+
+    nav .effect::before {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -64,8 +140,8 @@
         border-top-right-radius: 30px;
         transition: .5s;
     }
-    
-    nav .effect::after{
+
+    nav .effect::after {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -76,8 +152,8 @@
         border-top-left-radius: 30px;
         transition: .5s;
     }
-    
-    nav .effect .circle{
+
+    nav .effect .circle {
         position: absolute;
         width: var(--w-h-item);
         height: var(--w-h-item);
@@ -87,8 +163,8 @@
         box-shadow: 0 20px 20px gray;
         transition: .5s;
     }
-    
-    nav .effect .circle::before{
+
+    nav .effect .circle::before {
         position: absolute;
         left: -10px;
         right: -10px;
@@ -378,10 +454,21 @@
 @media screen and (max-width: 678px) {
     .slider .list .item .content {
         padding-right: 0;
+        top: 70px;
+        overflow: hidden;
     }
 
     .slider .list .item .content .title {
-        font-size: 50px;
+        font-size: 38px;
+    }
+
+    .slider .list .item .content .type {
+        font-size: 38px;
+    }
+
+    .description {
+        font-size: 13px;
+        color: #000;
     }
 }
 
@@ -400,15 +487,18 @@
     clip-path: polygon(168.72% -0.12%, 0% 0%, -0.78% 99%);
 }
 
-.about-content span:nth-child(1) {
+.about-content span {
     display: block;
     padding: 30px 0;
     width: 50%;
 }
 
-.about-content span:nth-child(2) {
+.about-content2 {
     display: block;
     width: 50%;
+    position: relative;
+    left: 50%;
+    bottom: 2%;
 }
 
 .list-container {
@@ -445,6 +535,46 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+@media (max-width: 800px) {
+    .about-content {
+        position: relative;
+        right: 25px;
+    }
+
+    .about-head {
+        position: relative;
+        right: 25px;
+    }
+
+    .about-content span {
+        width: 88%;
+    }
+
+    .about-content2 {
+        width: 90%;
+        left: 6%;
+        bottom: 165px;
+    }
+
+    .list-container {
+        padding: 0 18px;
+    }
+
+    .list-container i {
+        overflow: visible;
+    }
+
+    .vision-content {
+        gap: 15px;
+    }
+
+    .gif img {
+        width: 50%;
+        left: 55%;
+        transform: translateY(-95%);
+    }
 }
 
 /* making 3d image rotate academic section */
@@ -515,6 +645,12 @@
 #d3-next {
     position: relative;
     left: 75%;
+}
+
+@media (max-width: 800px) {
+    .d3-head {
+        padding: 45px 30px;
+    }
 }
 
 /* making event section */
