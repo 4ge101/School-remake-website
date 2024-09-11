@@ -19,7 +19,7 @@ header {
 }
 
 nav {
-    width: 90%;
+    width: 96%;
     height: 55px;
     background-color: #172d54;
     display: flex;
@@ -54,7 +54,7 @@ nav ul li a {
 .logo img {
     width: 5%;
     position: absolute;
-    left: 90px;
+    left: 55px;
     top: 2px;
 }
 
@@ -187,11 +187,6 @@ nav ul li a {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    .hide-on-mobile {
-        display: flex;
-        overflow: visible;
     }
 }
 
