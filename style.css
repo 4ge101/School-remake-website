@@ -58,7 +58,7 @@ nav ul li a {
     top: 2px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     header {
         z-index: 999;
     }
@@ -80,6 +80,10 @@ nav ul li a {
         align-items: center;
         padding: 0;
         border-radius: 0;
+    }
+
+    .hide-on-mobile {
+        display: none;
     }
 
     .logo img {
@@ -175,6 +179,19 @@ nav ul li a {
         box-shadow: 0 50px 0 30px black;
         bottom: -10px;
         transition: .5s;
+    }
+}
+
+@media only screen and (max-width: 812px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hide-on-mobile {
+        display: flex;
+        overflow: visible;
     }
 }
 
@@ -498,7 +515,7 @@ nav ul li a {
     width: 50%;
     position: relative;
     left: 50%;
-    bottom: 2%;
+    bottom: 120px;
 }
 
 .list-container {
@@ -537,7 +554,7 @@ nav ul li a {
     gap: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .about-content {
         position: relative;
         right: 25px;
@@ -570,9 +587,13 @@ nav ul li a {
         gap: 15px;
     }
 
+    .gif {
+        padding: 40px 0;
+    }
+
     .gif img {
         width: 50%;
-        left: 55%;
+        left: 0;
         transform: translateY(-95%);
     }
 }
@@ -647,7 +668,7 @@ nav ul li a {
     left: 75%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .d3-head {
         padding: 45px 30px;
     }
@@ -667,13 +688,17 @@ nav ul li a {
     .d3-banner .d3-slider .d3-item img {
         width: 70%;
         height: 70%;
+        box-shadow: 0px 0px 4px black;
     }
 
     #d3-next {
         left: 65%;
-    }.d3-button-wrapper {
+    }
+
+    .d3-button-wrapper {
         bottom: 400px;
-      }
+        right: 20px;
+    }
 }
 
 /* making event section */
@@ -812,19 +837,6 @@ ul {
     background-color: #fff;
 }
 
-/* responsive */
-@media(max-width: 767px) {
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-
-@media(max-width: 574px) {
-    .footer-col {
-        width: 100%;
-    }
-}
 
 .copy-right {
     display: flex;
@@ -871,4 +883,29 @@ ul {
     background-color: #4f55a8;
     border-radius: 50%;
     padding: 3px 9px;
+}
+
+/* responsive */
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+        padding: 15px 50px 0;
+    }
+
+    .go-up {
+        display: none;
+    }
+
+    .copy-right {
+        padding: 0 10px;
+        bottom: 0;
+        text-align: center;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
 }
