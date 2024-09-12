@@ -83,7 +83,7 @@ body.activeNav .nav-toggle span:nth-child(2) {
     transition: width 300ms ease-in-out 230ms,
         height 300ms ease-in-out 230ms,
         border-radius 300ms ease-in-out 30ms;
-        z-index: 99;
+    z-index: 99;
 }
 
 body.activeNav .nav-overlay {
@@ -143,12 +143,15 @@ body.activeNav .nav .links>div:nth-child(4) {
 body.activeNav .nav .links>div:nth-child(5) {
     transition: left 300ms ease-in-out 770ms;
 }
+
 body.activeNav .nav .links>div:nth-child(6) {
     transition: left 300ms ease-in-out 790ms;
 }
+
 body.activeNav .nav .links>div:nth-child(7) {
     transition: left 300ms ease-in-out 820ms;
 }
+
 /* header slider */
 .slider {
     width: 100vw;
@@ -444,12 +447,26 @@ body.activeNav .nav .links>div:nth-child(7) {
 }
 
 /* making about section */
-.about-head-wrapper{
-    position: relative;
-  left: 600px;
-}
-.about-img img{
+.about-head-wrapper {
     position: absolute;
+    left: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 60px 0;
+    top: 0;
+}
+
+.about-img img {
+    position: relative;
+}
+
+.about-content3 {
+    display: flex;
+    width: 50%;
+    position: absolute;
+    top: 210px;
+    left: 600px;
 }
 
 .gif img {
