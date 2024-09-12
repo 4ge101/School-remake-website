@@ -1,32 +1,7 @@
 // making nav active class
-let nav = document.querySelector('nav');
-let items = document.querySelectorAll('li a');
-
-let currentPage = window.location.pathname.split('/').pop();
-
-items.forEach(item => {
-    let listItem = item.parentElement;
-
-    let pageLink = item.getAttribute('href').split('/').pop();
-
-    if (pageLink === currentPage) {
-        listItem.classList.add('active');
-        nav.style.setProperty('--position-x-active', listItem.offsetLeft + 'px');
-    } else {
-        listItem.classList.remove('active');
-    }
-
-    listItem.onclick = () => {
-        let oldActive = nav.querySelector('li.active');
-        if (oldActive) oldActive.classList.remove('active');
-        listItem.classList.add('active');
-        nav.style.setProperty('--position-x-active', listItem.offsetLeft + 'px');
-    };
-});
-
-let itemActive = nav.querySelector('li.active');
-if (itemActive) nav.style.setProperty('--position-x-active', itemActive.offsetLeft + 'px');
-
+function toggleNav(){
+    document.body.classList.toggle("activeNav");
+}
 
 // making slider which change background 
 let nextBtn = document.querySelector('.next')

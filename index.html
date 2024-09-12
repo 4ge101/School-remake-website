@@ -12,22 +12,38 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo"><a href="index.html"><img src="assets/logo/school.png"></a></div>
-            <ul>
-                <li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
-                <li><i class="fa-solid fa-user"></i><a href="about.html">About us</a></li>
-                <li class="hide-on-mobile"><i class="fa-solid fa-chalkboard-user"></i><a href="academic.html">Academics</a></li>
-                <li class="active"><i class="fa-solid fa-images"></i><a href="facilitie.html">Facilities</a></li>
-                <li class="hide-on-mobile"><i class="fa-solid fa-hand-holding-droplet"></i><a href="gallery.html">Gallery</a></li>
-                <li><i class="fa-solid fa-bars"></i><a href="contact.html">Contact us</a></li>
-            </ul>
-            <div class="effect">
-                <div class="circle"></div>
+
+    <div class="nav-toggle" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav-overlay"></div>
+    <div class="nav">
+        <div class="links">
+            <div class="link">
+                <a href="index.html">Home</a>
             </div>
-        </nav>
-    </header>
+            <div class="link">
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="link">
+                <a href="">Academics</a>
+            </div>
+            <div class="link">
+                <a href="">Facilities</a>
+            </div>
+            <div class="link">
+                <a href="">Gallery</a>
+            </div>
+            <div class="link">
+                <a href="">Contact us</a>
+            </div>
+            <div class="link">
+                <a href="">Admission</a>
+            </div>
+        </div>
+    </div>
 
     <div class="slider">
         <div class="list">
