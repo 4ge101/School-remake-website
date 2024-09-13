@@ -176,11 +176,13 @@ body.activeNav .nav .links>div:nth-child(6) {
 body.activeNav .nav .links>div:nth-child(7) {
     transition: left 300ms ease-in-out 820ms;
 }
+
 @media (max-width: 700px) {
-  .logo img{
-    width: 20%;
-  }  
+    .logo img {
+        width: 20%;
+    }
 }
+
 /* header slider */
 .slider {
     width: 100vw;
@@ -916,4 +918,26 @@ ul {
     .footer-col {
         width: 100%;
     }
+}
+
+/* making counter list of student and teacher */
+.counter-wrapper{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.counter-container{
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 16px 0;
+    position: relative;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: red;
+    border-bottom: 10px solid black;
+    align-items: center;
 }
