@@ -3,52 +3,22 @@ function toggleNav() {
     document.body.classList.toggle("activeNav");
 }
 
-// making slider which change background 
-let nextBtn = document.querySelector('.next')
-let prevBtn = document.querySelector('.prev')
+// making student and teacher counter
+let valueDisplays = document.querySelectorAll(".counter-number");
+let interval = 4000;
 
-let slider = document.querySelector('.slider')
-let sliderList = slider.querySelector('.slider .list')
-let thumbnail = document.querySelector('.slider .thumbnail')
-let thumbnailItems = thumbnail.querySelectorAll('.item')
-
-thumbnail.appendChild(thumbnailItems[0])
-
-// Function for next button 
-nextBtn.onclick = function () {
-    moveSlider('next')
-}
-
-
-// Function for prev button 
-prevBtn.onclick = function () {
-    moveSlider('prev')
-}
-
-
-function moveSlider(direction) {
-    let sliderItems = sliderList.querySelectorAll('.item')
-    let thumbnailItems = document.querySelectorAll('.thumbnail .item')
-
-    if (direction === 'next') {
-        sliderList.appendChild(sliderItems[0])
-        thumbnail.appendChild(thumbnailItems[0])
-        slider.classList.add('next')
-    } else {
-        sliderList.prepend(sliderItems[sliderItems.length - 1])
-        thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1])
-        slider.classList.add('prev')
-    }
-
-
-    slider.addEventListener('animationend', function () {
-        if (direction === 'next') {
-            slider.classList.remove('next')
-        } else {
-            slider.classList.remove('prev')
+valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(function () {
+        startValue += 1;
+        valueDisplay.textContent = startValue;
+        if (startValue == endValue) {
+            clearInterval(counter);
         }
-    }, { once: true })
-}
+    }, duration);
+});
 
 // making 3d slider img
 const d3_slider = document.querySelector('.d3-slider');
