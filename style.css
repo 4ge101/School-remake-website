@@ -173,10 +173,6 @@ body.activeNav .nav .links>div:nth-child(6) {
     transition: left 300ms ease-in-out 790ms;
 }
 
-body.activeNav .nav .links>div:nth-child(7) {
-    transition: left 300ms ease-in-out 820ms;
-}
-
 @media (max-width: 700px) {
     .logo img {
         width: 20%;
@@ -986,7 +982,45 @@ ul {
         gap: 20px;
         overflow: visible;
     }
+
     .curved-counter {
         transform: translateY(0);
     }
+}
+
+/* making facilitie sction */
+.facilitie-ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 31px 0;
+    font-size: 18px;
+}
+
+.facilitie-ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.facilitie-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 111px 35px;
+    position: relative;
+    text-align: center;
+    gap: 45px;
+    background-color: #a2a5ce;
+}
+
+.facilitie span i {
+    font-size: 60px;
+    overflow: hidden;
+}
+
+.facilitie span i:hover {
+    color: blue;
+    transition: 0.3s;
+}
+
+.facilitie p {
+    padding: 15px 0;
 }
