@@ -724,11 +724,6 @@ body.activeNav .nav .links>div:nth-child(7) {
     width: calc(100% * 6 / 3);
 }
 
-/* .event-slide {
-width: 100%;
-flex: 1 0 auto;
-} */
-
 .event-slide img {
     width: 100%;
 }
@@ -921,13 +916,14 @@ ul {
 }
 
 /* making counter list of student and teacher */
-.counter-wrapper{
+.counter-wrapper {
     display: flex;
     justify-content: space-around;
     gap: 10px;
+    padding: 90px 0 120px;
 }
 
-.counter-container{
+.counter-container {
     width: 220px;
     height: 220px;
     display: flex;
@@ -937,7 +933,60 @@ ul {
     position: relative;
     font-size: 18px;
     border-radius: 8px;
-    background-color: red;
-    border-bottom: 10px solid black;
+    background-color: #a2a5ce;
     align-items: center;
+    border: 1px solid white;
+    box-shadow: 0px -1px 4px 1px black;
+}
+
+.counter-container:hover {
+    transition: 0.3s;
+    border-bottom: 10px solid black;
+}
+
+.curved-counter {
+    transform: translateY(22%);
+}
+
+/* makin about section responsive */
+@media (max-width: 900px) {
+    .about-img img {
+        width: 100%;
+    }
+
+    .about-head-wrapper {
+        position: relative;
+        left: 30px;
+        gap: 0;
+        padding: 20px 0px;
+
+    }
+
+    .about-content3 {
+        width: 88%;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 0 30px;
+    }
+
+    .about-head h1 {
+        position: relative;
+        left: 25px;
+    }
+
+    .about-head2 {
+        font-size: 10px;
+        padding: 15px 0 0;
+    }
+
+    .counter-wrapper {
+        display: grid;
+        padding: 40px 0;
+        gap: 20px;
+        overflow: visible;
+    }
+    .curved-counter {
+        transform: translateY(0);
+    }
 }

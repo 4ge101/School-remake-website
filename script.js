@@ -82,6 +82,7 @@ const snapToClosest = () => {
     d3_slider.style.transition = 'transform 0.5s ease';
 };
 
+// Mouse and touch event listeners
 ['mousedown', 'touchstart'].forEach(evt => {
     d3_slider.addEventListener(evt, (e) => {
         isDragging = true;
@@ -102,7 +103,7 @@ const snapToClosest = () => {
     d3_slider.addEventListener(evt, () => {
         if (!isDragging) return;
         isDragging = false;
-        snapToClosest();
+        snapToClosest(); // Snap to the nearest card after the drag ends
     });
 });
 

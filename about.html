@@ -73,13 +73,14 @@
         </div>
     </div>
 
+    <!-- making counter of student and teacher -->
     <div class="counter-wrapper">
         <div class="counter-container">
             <img src="assets/counter-icons/mentoring-stroke-rounded.svg" style="width: 45%;">
             <span class="counter-number" data-val="1980">0000</span>
             <span class="counter-text">Students</span>
         </div>
-        <div class="counter-container">
+        <div class="counter-container curved-counter">
             <img src="assets/counter-icons/presentation-01-stroke-rounded.svg" style="width: 45%;">
             <span class="counter-number" data-val="37">00</span>
             <span class="counter-text">Classes Rooms</span>
@@ -89,10 +90,33 @@
             <span class="counter-number" data-val="25678">000</span>
             <span class="counter-text">Students Passes Out</span>
         </div>
-        <div class="counter-container">
+        <div class="counter-container curved-counter">
             <img src="assets/counter-icons/teacher-stroke-rounded.svg" style="width: 45%;">
             <span class="counter-number" data-val="55">00</span>
             <span class="counter-text">Certified Teachers</span>
+        </div>
+    </div>
+
+    <!-- making 3d counter of academic section -->
+    <div class="d3-container">
+        <h1 class="d3-head">Our Academics</h1>
+        <div class="d3-banner" style="height: 75vh;">
+            <div class="d3-slider" style="--quantity: 7; --rotation: 0deg;">
+                <div class="d3-item" style="--position: 1"><img src="assets/academic-img/English-medium.png" alt="">
+                </div>
+                <div class="d3-item" style="--position: 2"><img src="assets/academic-img/Nepali-medium.png" alt="">
+                </div>
+                <div class="d3-item" style="--position: 3"><img src="assets/academic-img/Electrical-Engineering.jpg"
+                        alt=""></div>
+                <div class="d3-item" style="--position: 4"><img src="assets/academic-img/Management.png" alt=""></div>
+                <div class="d3-item" style="--position: 5"><img src="assets/academic-img/Mass.png" alt=""></div>
+                <div class="d3-item" style="--position: 6"><img src="assets/academic-img/Law.png" alt=""></div>
+                <div class="d3-item" style="--position: 7"><img src="assets/academic-img/Science.png" alt=""></div>
+            </div>
+        </div>
+        <div class="d3-button-wrapper" style="bottom: 300px; left: 25px;">
+            <button id="d3-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="d3-next"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </div>
 
