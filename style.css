@@ -1016,11 +1016,26 @@ ul {
     overflow: hidden;
 }
 
-.facilitie span i:hover {
-    color: blue;
-    transition: 0.3s;
-}
-
 .facilitie p {
     padding: 15px 0;
+}
+
+@media (max-width: 900px) {
+    .facilitie-ul {
+        display: flex;
+        font-size: 16px;
+        flex-wrap: wrap;
+        gap: 20px;
+        position: relative;
+        top: 30px;
+    }
+
+    .facilitie-nav {
+        overflow: visible;
+    }
+
+    .facilitie-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
