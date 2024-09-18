@@ -26,6 +26,11 @@ trigger.forEach((menu) => menu.addEventListener('click', function() {
     }
 }));
 
+// full screen nav
+function toggleNav(){
+    document.body.classList.toggle("activeNav");
+}
+
 // making slider which change background 
 let nextBtn = document.querySelector('.next')
 let prevBtn = document.querySelector('.prev')
