@@ -13,15 +13,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    z-index: 999;
+}
+.responsive-nav{
+    display: none;
+}
+nav {
+    background-color: white;
     width: 100%;
+    z-index: 999;
 }
 
-nav {
-    background: #172d54;
-    width: 90%;
-    border-radius: 0 0 30px 30px;
+.logo img {
+    width: 5%;
+    position: absolute;
+    left: 70px;
 }
 
 nav ul {
@@ -39,7 +44,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-size: 20px;
-    color: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +66,16 @@ nav ul li a {
         margin: 0 auto;
     }
 
+    .responsive-nav {
+        z-index: 999;
+        position: absolute;
+        bottom: 30px;
+        overflow: hidden;
+        font-size: 20px;
+        right: 20px;
+        display: block;
+    }
+
     nav {
         position: fixed;
         bottom: 0;
@@ -75,12 +90,16 @@ nav ul li a {
         z-index: 999;
     }
 
+    .logo img {
+        display: none;
+    }
+
     nav ul {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 0;
-        padding: 0;
+        justify-content: start;
+        gap: 6px;
+        padding: 0;    
     }
 
     nav :where(li, a) {
