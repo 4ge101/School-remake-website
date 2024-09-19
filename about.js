@@ -38,6 +38,11 @@ trigger.forEach((menu) => menu.addEventListener('click', function() {
     }
 }));
 
+// full screen nav
+function toggleNav(){
+    document.body.classList.toggle("activeNav");
+}
+
 // making student and teacher counter
 let valueDisplays = document.querySelectorAll(".counter-number");
 let interval = 4000;
