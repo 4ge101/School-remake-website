@@ -134,3 +134,9 @@ const snapToClosest = () => {
         snapToClosest(); // Snap to the nearest card after the drag ends
     });
 });
+
+
+// Close Popup Function
+function closePopup() {
+    document.getElementById("demoPopup").style.display = "none";
+  }
