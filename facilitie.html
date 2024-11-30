@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <!-- navigation menu -->
+    <div id="page" class="site">
+        <div class="nav-container">
+            <a class="link-logo" href="index.html"><img class="logo" src="assets/logo/school.png"></a>
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html"><span>Home</span><img
+                                src="assets/icons/home-03-stroke-rounded.svg"></a></li>
+                    <li><a href="about.html"><span>About</span><img src="assets/icons/teaching-stroke-rounded.svg"></a>
+                    </li>
+                    <li><a href="facilitie.html"><span>Facilites</span><img
+                                src="assets/icons/droplet-stroke-rounded.svg"></a></li>
+                    <li><a href="gallery.html"><span>Gallery</span><img
+                                src="assets/icons/google-photos-stroke-rounded.svg"></i></a></li>
+                    <li class="hide-on-mobile"><a href="contact.html"><span>Contact</span><img
+                                src="assets/icons/contracts-stroke-rounded.svg"></a></li>
+                    <li class="hide-on-mobile"><a href="academic.html"><span>Academics</span><img
+                                src="assets/icons/school-tie-stroke-rounded.svg"></a></li>
+                </ul>
+                <div class="nav-toggle" onclick="toggleNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-overlay"></div>
+                <div class="nav2">
+                    <div class="links">
+                        <div class="link">
+                            <a href="">Contact us</a>
+                        </div>
+                        <div class="link">
+                            <a href="">Academics</a>
+                        </div>
+                        <div class="link">
+                            <a href="">Staffs</a>
+                        </div>
+                        <div class="link">
+                            <a href="">Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
