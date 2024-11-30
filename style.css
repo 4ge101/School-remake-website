@@ -795,6 +795,7 @@ body.activeNav .nav2 .links>div:nth-child(5) {
 
 .academic-container {
     padding: 70px 70px;
+    overflow: hidden;
 }
 
 .academic-head::after {
@@ -806,11 +807,36 @@ body.activeNav .nav2 .links>div:nth-child(5) {
 }
 
 .academic-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    gap: 20px;
     padding: 50px 0;
 }
 
-.academic-card img{
-    width: 90%;
+.academic-card {
+    flex: 0 0 calc(100% / 3);
+    box-shadow: 1px 2px 7px -2px black;
+    width: auto;
+}
+
+.academic-card img {
+    width: 100%;
+}
+
+.academic-title {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-button {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    display: flex;
 }
