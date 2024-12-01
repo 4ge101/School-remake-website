@@ -948,6 +948,41 @@ body.activeNav .nav2 .links>div:nth-child(5) {
     color: var(--color);
 }
 
+/* making counter list of student and teacher */
+.counter-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 45px 0;
+    overflow: hidden;
+}
+
+.counter-container {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 16px 0;
+    position: relative;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    align-items: center;
+    color: var(--color);
+    box-shadow: 1px 2px 7px -2px black;
+}
+
+.curved-counter {
+    position: relative;
+    bottom: 35px;
+}
+
+.curved-counter2 {
+    position: relative;
+    top: 35px;
+}
+
 /* RESPONSIVE FOR MOBILE */
 
 @media (max-width: 700px) {
