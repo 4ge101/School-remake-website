@@ -721,6 +721,7 @@ body.activeNav .nav2 .links>div:nth-child(5) {
     display: grid;
     gap: 10px;
     width: 580px;
+    overflow: visible;
 }
 
 .small-bento-img {
@@ -740,6 +741,7 @@ body.activeNav .nav2 .links>div:nth-child(5) {
     width: 600px;
     display: flex;
     gap: 10px;
+    overflow: visible;
 }
 
 .bento-column {
@@ -760,6 +762,18 @@ body.activeNav .nav2 .links>div:nth-child(5) {
     height: 580px;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.bento-hover1:hover {
+    width: 194%;
+    z-index: 990;
+    transition: 0.3s ease-in-out;
+}
+
+.bento-hover2:hover {
+    height: 194%;
+    z-index: 990;
+    transition: 0.3s ease-in-out;
 }
 
 .vision-container {
