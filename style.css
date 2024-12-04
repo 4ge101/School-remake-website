@@ -764,18 +764,6 @@ body.activeNav .nav2 .links>div:nth-child(5) {
     border-radius: 20px;
 }
 
-.bento-hover1:hover {
-    width: 194%;
-    z-index: 990;
-    transition: 0.3s ease-in-out;
-}
-
-.bento-hover2:hover {
-    height: 194%;
-    z-index: 990;
-    transition: 0.3s ease-in-out;
-}
-
 .vision-container {
     padding: 70px 70px;
 }
