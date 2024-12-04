@@ -1052,6 +1052,66 @@ body.activeNav .nav2 .links>div:nth-child(5) {
     transform: scaleX(1);
 }
 
+
+/* Facilitie Section */
+
+.gallery-container {
+    padding: 70px 70px;
+}
+
+.gallery-head::after {
+    content: '';
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 4%;
+    height: 5px;
+}
+
+.gallery-nav ul {
+    display: flex;
+    gap: 25px;
+    padding: 50px 0;
+    justify-content: center;
+}
+
+.gallery-nav ul li a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 18px;
+    position: relative;
+}
+
+.gallery-nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.gallery-nav ul li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Contact section */
+.contact-container{
+    padding: 70px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-head h1{
+    font-size: 28px;
+}
+
 /* RESPONSIVE FOR MOBILE */
 
 @media (max-width: 700px) {
@@ -1108,6 +1168,14 @@ body.activeNav .nav2 .links>div:nth-child(5) {
     }
 
     .facilitie-nav ul {
+        flex-wrap: wrap;
+    }
+
+    .gallery-container {
+        padding: 35px 35px;
+    }
+
+    .gallery-nav ul {
         flex-wrap: wrap;
     }
 }
