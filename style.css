@@ -1130,7 +1130,14 @@ textarea {
     font-weight: 500;
 }
 
-.btn-submit{
+.form-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.btn-submit {
     width: 12%;
     padding: 12px 0;
     font-size: 15px;
@@ -1139,6 +1146,18 @@ textarea {
     border: 1px solid var(--primary-color);
     color: var(--color);
     border-radius: 5px;
+}
+
+.teacher-contact-container {
+    padding: 70px 70px;
+}
+
+.teacher-contact-head::after {
+    content: '';
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 4%;
+    height: 5px;
 }
 
 /* RESPONSIVE FOR MOBILE */
