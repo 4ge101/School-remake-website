@@ -1149,27 +1149,6 @@ textarea {
     border-radius: 5px;
 }
 
-.teacher-contact-container {
-    padding: 70px 70px;
-}
-
-.teacher-contact-head::after {
-    content: '';
-    position: absolute;
-    background-color: var(--primary-color);
-    width: 4%;
-    height: 5px;
-}
-
-.teacher-card-container {
-    padding: 50px 0;
-}
-
-.teacher-card img {
-    width: 30%;
-    border-radius: 10px;
-}
-
 /* RESPONSIVE FOR MOBILE */
 
 @media (max-width: 700px) {
