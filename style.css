@@ -1161,6 +1161,15 @@ textarea {
     height: 5px;
 }
 
+.teacher-card-container {
+    padding: 50px 0;
+}
+
+.teacher-card img {
+    width: 30%;
+    border-radius: 10px;
+}
+
 /* RESPONSIVE FOR MOBILE */
 
 @media (max-width: 700px) {
