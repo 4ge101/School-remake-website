@@ -19,7 +19,7 @@ function setActiveClass() {
 document.addEventListener('DOMContentLoaded', setActiveClass);
 
 // Add click event listener to toggle active class dynamically
-trigger.forEach((menu) => menu.addEventListener('click', function() {
+trigger.forEach((menu) => menu.addEventListener('click', function () {
     trigger.forEach((item) => item != this ? item.classList.remove('active') : null);
     if (!this.classList.contains('active')) {
         this.classList.add('active');
@@ -27,7 +27,7 @@ trigger.forEach((menu) => menu.addEventListener('click', function() {
 }));
 
 // full screen nav
-function toggleNav(){
+function toggleNav() {
     document.body.classList.toggle("activeNav");
 }
 

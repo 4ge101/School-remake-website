@@ -1053,7 +1053,7 @@ body.activeNav .nav2 .links>div:nth-child(5) {
 }
 
 
-/* Facilitie Section */
+/* Gallery Section */
 
 .gallery-container {
     padding: 70px 70px;
@@ -1101,6 +1101,7 @@ body.activeNav .nav2 .links>div:nth-child(5) {
 }
 
 /* Contact section */
+
 .contact-container {
     padding: 70px 70px;
     display: flex;
