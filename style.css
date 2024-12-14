@@ -1119,6 +1119,7 @@ body.activeNav .nav2 .links>div:nth-child(5) {
     flex-direction: column;
     gap: 10px;
     width: 80%;
+    overflow: visible;
 }
 
 .contact-container form input,
@@ -1226,5 +1227,22 @@ textarea {
 
     .timeline-content {
         font-size: 15px;
+    }
+
+    .contact-container {
+        padding: 35px 35px;
+    }
+
+    .contact-head h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .contact-container form{
+        width: auto;
+    }
+
+    .btn-submit{
+        width: 35%;
     }
 }
