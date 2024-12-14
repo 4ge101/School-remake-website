@@ -1215,4 +1215,16 @@ textarea {
     .gallery-nav ul {
         flex-wrap: wrap;
     }
+
+    .design-section {
+        padding: 30px 20px;
+    }
+
+    .timeline {
+        width: auto;
+    }
+
+    .timeline-content {
+        font-size: 15px;
+    }
 }
