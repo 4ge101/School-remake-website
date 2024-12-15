@@ -1239,7 +1239,7 @@ textarea {
     }
 
     .contact-container form{
-        width: auto;
+        width: 100%;
     }
 
     .btn-submit{
